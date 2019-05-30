@@ -1,0 +1,49 @@
+<h3>Add Corporate</h3>
+<form [formGroup]="formGroup">
+  <mat-horizontal-stepper labelPosition="bottom" formArrayName="formArray" linear>
+    <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
+      <ng-template matStepLabel>Corporate Details</ng-template>
+      <mat-form-field>
+        <mat-label>Trainer Name</mat-label>
+        <input matInput formControlName="trainernameFormCtrl" required>
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Experience</mat-label>
+        <input matInput formControlName="expFormCtrl" required>
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Skill Set</mat-label>
+        <input matInput formControlName="skillFormCtrl" required>
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+      
+      <div>
+        <button mat-raised-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step formGroupName="1" [stepControl]="formArray?.get([1])">
+      <ng-template matStepLabel>Contact Details</ng-template>
+          <mat-form-field>
+        <mat-label>Contact Number</mat-label>
+        <input matInput formControlName="contactFormCtrl">
+        <mat-error>This field is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email Id</mat-label>
+        <input matInput formControlName="emailFormCtrl">
+        <mat-error>The input is invalid.</mat-error>
+      </mat-form-field>
+      
+      <div>
+            <button mat-raised-button matStepperBack>Back</button>
+        <button type="button" mat-raised-button (click)="formsubmit()">Submit</button>
+        <!-- <button type="button" mat-raised-button (click)="linearVerticalStepper.reset()">Reset</button> -->
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</form>
+
