@@ -4,6 +4,7 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { TrainerprofileComponent , CertificationCreateComponent ,SkillCreateComponent } from './components/trainerprofile/trainerprofile.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
@@ -26,6 +27,21 @@ const routes: Routes =[
     data: {
       title: 'Register Page'
     }
+  },
+  {
+    path: 'trainerprofile',
+    component:TrainerprofileComponent,
+    data:{
+      title: 'Trainer Profile'
+    }
+  },
+  {
+    path: 'createcertification',
+    component: CertificationCreateComponent
+  },
+  {
+    path: 'createskill',
+    component: SkillCreateComponent
   },
  {
     path: '',

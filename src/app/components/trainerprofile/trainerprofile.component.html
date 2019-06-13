@@ -1,0 +1,236 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <hr>
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <a class="curpoint pull-right" (click)="editprofile()" ngbPopover="Edit" placement="left"
+                      triggers="mouseenter:mouseleave"><i class="material-icons">
+                          create
+                          </i></a>
+                      <h4 class="card-title">Personal Details</h4>
+                      <p class="card-category">Complete your profile</p>
+                  </div>
+                  <div class="card-body">
+                      <form>
+                          <div class="row">
+                              <div class="col-md-5">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Company Name" [disabled]="active">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Username" [disabled]="active">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email address" type="email" [disabled]="active">
+                                  </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Fist Name" type="text" [disabled]="active">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Last Name" type="text" [disabled]="active">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Adress" type="text" [disabled]="active">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="City" type="text" [disabled]="active">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Country" type="text" [disabled]="active">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Postal Code" type="text" [disabled]="active">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <label>About Me</label>
+                                <mat-form-field class="example-full-width">
+                                   <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo." [disabled]="active"></textarea>
+                                 </mat-form-field>
+                                  <!-- <div class="form-group">
+
+                                      <div class="form-group">
+                                          <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                                          <textarea class="form-control" rows="5"></textarea>
+                                      </div>
+                                  </div> -->
+                              </div>
+                          </div>
+                          <button mat-raised-button type="submit" *ngIf="enable" class="btn btn-danger pull-right">Update Profile</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card card-profile">
+                  <div class="card-avatar">
+                      <a href="#pablo">
+                          <img class="img" src="./assets/img/faces/marc.jpg" />
+                      </a>
+                  </div>
+                  <div class="card-body">
+                      <!-- <h6 class="card-category text-gray">CEO / Co-Founder</h6> -->
+                      <h4 class="card-title">Alec Thompson</h4>
+                      <h4 class="card-category text-gray">Senior Software Engineer</h4>
+                      <p> Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed</p>
+                      <p class="card-description">
+                          <ngb-rating class ="star" [(rate)]="currentRate" [readonly]="true" max="5"></ngb-rating>
+                          <!-- <span>Rate: <b>{{currentRate}}</b></span> --> 
+                      </p>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <i class="material-icons">
+                                room
+                                </i> Bangalore/Bengaluru
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="material-icons">
+                                phone
+                                </i>
+                            +91 890675854
+                          </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col-sm-6">
+                              <i class="material-icons">
+                                  card_travel
+                                  </i> 4 Year(s) 2 month(s)
+                          </div>
+                          <div class="col-sm-6">
+                              <i class="material-icons">
+                                  mail
+                                  </i> john.11@ffg.cum
+                            </div>
+                        </div>
+                        <div>
+                          
+                        </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-header card-header-danger">
+                  <h4 class="card-title pull-left">Skills</h4>
+                  
+                  <a class="curpoint pull-right" (click)="addskills()" ngbPopover="Add Skill" placement="left"
+                  triggers="mouseenter:mouseleave"><i class="material-icons">
+                      add
+                      </i></a>
+                </div>
+                  <div class="card-body">
+                    <div class="row">
+                        <p>
+                            <span class="numberCircle">HTML</span>
+                        </p>
+                        <p>
+                            <span class="numberCircle">CSS3</span>
+                        </p>
+                        <p>
+                            <span class="numberCircle">Javascript</span>
+                        </p>
+                        <p>
+                            <span class="numberCircle">Angular</span>
+                        </p>
+                        <p>
+                            <span class="numberCircle">Nodejs</span>
+                        </p>
+                        <p>
+                            <span class="numberCircle">Nodejs</span>
+                        </p>
+                        <p>
+                            <span class="numberCircle">Nodejs</span>
+                        </p>
+                        <p>
+                            <span class="numberCircle">Nodejs</span>
+                        </p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card card-profile">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title pull-left">Certifications</h4>
+                      
+                      <a class="curpoint pull-right" (click)="addcertification()" ngbPopover="Add Certification" placement="left"
+                      triggers="mouseenter:mouseleave"><i class="material-icons">
+                          add
+                          </i></a>
+                    </div>
+                  <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          Course: Core Java
+                        </div>
+                        <div class="col-sm-6">
+                            Institute: ABC institutions
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-6">
+                            Course: Core Java
+                          </div>
+                          <div class="col-sm-6">
+                              Institute: ABC institutions
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                              Course: Angular
+                            </div>
+                            <div class="col-sm-6">
+                                Institute: Simplilearn
+                              </div>
+                          </div>
+                      <!-- <a href="#pablo" class="btn btn-danger btn-round">Follow</a> -->
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card card-profile">
+                <h4 class="card-header card-header-danger">Education</h4>
+                  <div class="card-body">
+                      <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                      <h4 class="card-title">Alec Thompson</h4>
+                      <video class="video-fluid z-depth-1" autoplay loop controls muted>
+                          <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
+                      </video>
+                      <p class="card-description">
+                          Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                      </p>
+                      <!-- <a href="#pablo" class="btn btn-danger btn-round">Follow</a> -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
